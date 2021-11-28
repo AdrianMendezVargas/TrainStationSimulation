@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+
+	<body class="min-vh-100">
+		<div class="containter-fluid justify-content-center align-items-center px-3">
+			<div class="row mt-3">
+				<h1 class="text-center">Simulacion del metro</h1>
+			</div>
+			<div class="row py-5">
+				<div class="col">
+					<h3 class="text-center mb-4">Indicadores</h3>
+					<p><strong>Personas en el tren: </strong><span id="peopleInTrain"></span></p>
+					<p><strong>Personas en espera del tren: </strong><span id="peopleWaitingTrain"></span></p>
+					<p><strong>Personas rechazadas: </strong><span id="peopleRejected"></span></p>
+					<p><strong>Ingresos: $</strong><span id="income"></span></p>
+					<h5 class="mt-4">Detalles pasajeros</h5>
+					<p><strong>Total pasajeros: </strong><span id="totalPassengers"></span></p>
+					<p><strong>Total hombres: </strong><span id="totalMenPassengers"></span></p>
+					<div class="d-flex">
+						<p><strong>Total mujeres: </strong><span id="totalWomenPassengers"></span></p>
+						<p class="ms-5"><strong>Total embarazadas: </strong><span id="totalPregnantPassengers"></span></p>
+					</div>
+					<p><strong>Total niños: </strong><span id="totalKidPassengers"></span></p>
+					<p><button class="btn btn-primary" onclick="HandleStartClick()">Iniciar simulacion</button></p>
+					<div class="form-check">
+						<input class="form-check-input" onchange="HandleTootipsCheck()" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							Mostrar infomacion de estacion siempre
+						</label>
+					</div>
+				</div>
+				<div class="col">
+					<div class="train-container">
+						<div class="obj rock1" style="top: 10px; left: 20px;"></div>
+						<div class="obj rock1" style="bottom: 90px; left: 10px;"></div>
+						<div class="obj factory" style="bottom: 250px; left: 200px;"></div>
+
+						<img class="train-rails" src="img/rails.png" alt="" srcset="">
+						<img class="train" src="img/train.png" alt="" srcset="">
+					
+						<div id="blue-stop" class="train-stop blue-stop" data-bs-toggle="tooltip" data-bs-placement="left"
+							data-bs-html="true" title=".">
+							<div class="waitingLine"></div>
+							<div class="sideWalk"></div>
+							<div class="sideWalk-exit"></div>
+							<div class="exitLine"></div>
+						</div>
+						<div id="yellow-stop" class="train-stop yellow-stop" data-bs-toggle="tooltip" data-bs-placement="left"
+							data-bs-html="true" title=".">
+							<div class="waitingLine"></div>
+							<div class="sideWalk"></div>
+							<div class="sideWalk-exit"></div>
+							<div class="exitLine"></div>
+						</div>
+						<div id="red-stop" class="train-stop red-stop" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-html="true"
+							title=".">
+							<div class="waitingLine"></div>
+							<div class="sideWalk"></div>
+							<div class="sideWalk-exit"></div>
+							<div class="exitLine"></div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+			<div class="row mt-5 d-flex justify-content-center">
+				
+			</div>
+		</div>
+
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+
+</html>

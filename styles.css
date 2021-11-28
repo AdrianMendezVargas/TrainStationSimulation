@@ -1,0 +1,143 @@
+body{
+	background-color: #E1E7C3;
+}
+
+.train-container{
+	position: relative;
+	height: 502px;
+	width: 500px;
+}
+
+.train-rails{
+	position: absolute;
+}
+
+.train{
+	position: absolute;
+	transform: rotate(0deg);
+	transition-property: transform;
+	transition-duration: 5s;
+}
+
+.train-stop{
+	position: absolute;
+	height: 150px;
+	width: 150px;
+	background-position: center;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.blue-stop{
+	bottom: -70px;
+	right: -0px;
+	transform: rotate(145deg);
+	background-image: url('img/blueStop.png');
+}
+
+.yellow-stop{
+	top: -70px;
+	right: 40px;
+	transform: rotate(25deg);
+	background-image: url('img/yellowStop.png');
+}
+
+.red-stop{
+	bottom: 170px;
+	left: -115px;
+	transform: rotate(-90deg);
+	background-image: url('img/redStop.png');
+}
+
+.waitingLine, .exitLine{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	justify-content: end;
+	right: 0;
+	height: 150px;
+	width: 15px;
+}
+
+.sideWalk, .sideWalk-exit{
+	position: absolute;
+	justify-content: end;
+	right: 0;
+	height: 150px;
+	width: 15px;
+	background-color: #999;
+}
+
+.sideWalk-exit{
+	left: 0;
+}
+
+
+.exitLine{
+	left: 0;
+} 
+
+.exitLine .person{
+	transform: rotate(180deg);
+}
+
+.person{
+	height: 15px;
+	width: 15px;
+	background-position: center;
+	background-size: contain;
+	z-index: 99;
+	transition-property: top;
+	transition-duration: 7s;
+}
+
+.exiting{
+	position: absolute;
+	animation-name: exit;	
+	animation-timing-function: linear;
+	animation-duration: 7s;
+}
+
+@keyframes exit {
+	0%{
+		top:0;
+	}
+	100%{
+		top:-150px;
+	}
+}
+
+.person-kid{
+	background-image: url('img/kid.png');
+}
+
+.person-men{
+	background-image: url('img/men.png');
+}
+
+.person-women{
+	background-image: url('img/women.png');
+}
+
+.person-pregnant{
+	background-image: url('img/pegnant.png');
+}
+
+.obj{
+	position: absolute;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.rock1{
+	height: 55px;
+	width: 55px;
+	background-image: url('img/rock1.jpg');
+}
+
+.factory{
+	height: 55px;
+	width: 100px;
+	background-image: url('img/factory.jpg');
+}
